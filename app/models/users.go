@@ -51,3 +51,16 @@ func (user *User) UpdateUser() (err error) {
 
 	return err
 }
+
+
+func (user *User) DeleteUser() (err error) {
+	cmd := `delete from users where id = ?`
+	_, err = Db.Exec(cmd, user.ID)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return err
+}
+
