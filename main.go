@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(models.Db)
+	// fmt.Println(models.Db)
 
 	// u := &models.User{}
 	// u.Name = "test"
@@ -28,14 +28,22 @@ func main() {
 
 	// user.DeleteUser()
 
-	// user, _ := models.GetUser(3)
+	user, _ := models.GetUser(3)
+
+	user.CreateTodo("test todo")
+
+	todos, _ := user.GetTodosByUser()
+	for _, v := range todos {
+		fmt.Println(v)
+	}
+
 	// fmt.Println(user)
 	// user.CreateTodo("First todo")
 
 	// todo, _ := models.GetTodo(1)
 	// fmt.Println(todo)
-	todos, _ := models.GetTodos()
-	for _, v := range todos {
-		fmt.Println(v)
-	}
+	// todos, _ := models.GetTodos()
+	// for _, v := range todos {
+	// 	fmt.Println(v)
+	// }
 }
