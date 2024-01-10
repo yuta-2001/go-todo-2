@@ -8,13 +8,13 @@ import (
 func main() {
 	fmt.Println(models.Db)
 
-	u := &models.User{}
-	u.Name = "test"
-	u.Email = "test@example.com"
-	u.Password="testpass"
-	fmt.Println(u)
+	// u := &models.User{}
+	// u.Name = "test"
+	// u.Email = "test@example.com"
+	// u.Password="testpass"
+	// fmt.Println(u)
 
-	u.CreateUser()
+	// u.CreateUser()
 
 	// user, _ := models.GetUser(1)
 	// fmt.Println(user)
@@ -28,7 +28,10 @@ func main() {
 
 	// user.DeleteUser()
 
-	user, _ := models.GetUser(3)
-	fmt.Println(user)
-	user.CreateTodo("First todo")
+	// user, _ := models.GetUser(3)
+	// fmt.Println(user)
+	// user.CreateTodo("First todo")
+
+	todo, _ := models.GetTodo(1)
+	fmt.Println(todo)
 }
