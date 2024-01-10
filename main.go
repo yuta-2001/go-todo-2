@@ -47,13 +47,17 @@ func main() {
 	// 	fmt.Println(v)
 	// }
 
+	// t, _ := models.GetTodo(1)
+
+	// fmt.Println(t)
+	// t.Content = "Update todo"
+
+	// t.UpdateTodo()
+
+	// t, _ = models.GetTodo(1)
+	// fmt.Println(t)
+
 	t, _ := models.GetTodo(1)
-
 	fmt.Println(t)
-	t.Content = "Update todo"
-
-	t.UpdateTodo()
-
-	t, _ = models.GetTodo(1)
-	fmt.Println(t)
+	t.DeleteTodo()
 }
